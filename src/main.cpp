@@ -28,7 +28,7 @@ std::string hasData(std::string s) {
   return "";
 }
 
-int main(int argc, char *argv[])
+int main()
 {
   uWS::Hub h;
 
@@ -38,9 +38,9 @@ int main(int argc, char *argv[])
   // -0.1125, -0.005, -0.8 - good laps but still touched edge on curve after pit stop
   // -0.1, -0.005, -0.9 - better and stayed within the track, the pulling at turns is harder, and carry some oscilation still
   // -0.1, -0.006, -0.9 - good at first 2 laps, crash afterward
-  double Kp = atof(argv[1]);
-  double Ki = atof(argv[2]);
-  double Kd = atof(argv[3]);
+  double Kp = 0.1;
+  double Ki = 0.005;
+  double Kd = 0.9;
   
   
   
